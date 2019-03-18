@@ -5,6 +5,8 @@
 
     public class Product
     {
+        [MaxLength(50)]
+        [Required]
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -16,10 +18,10 @@
         public string ImageUrl { get; set; }
 
         [Display(Name = "Last purchase")]
-        public DateTime LastPurchase { get; set; }
+        public DateTime? LastPurchase { get; set; }
 
         [Display(Name = "Last sale")]
-        public DateTime LastSale { get; set; }
+        public DateTime? LastSale { get; set; }
 
         [Display(Name = "Is availabe?")]
         public bool IsAvailabe { get; set; }
